@@ -65,6 +65,27 @@ export class LayoutComponent implements OnInit {
   }
 
   openDialogThreeButtons(): void {
-
+    Swal.fire({
+      title: "Tres botones",
+      text: "Este es un cuadro de diálogo de tres botones.",
+      icon: "warning",
+      width: "35rem",
+      scrollbarPadding: true,
+      showConfirmButton: true,
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Confirmar",
+      confirmButtonColor: "#069539",
+      denyButtonText: "OK",
+      denyButtonColor: "#5360a9",
+      cancelButtonText: "Cancelar",
+      cancelButtonColor: "#cc253a",
+    })
+      .then((resolve) => {
+        console.log(resolve);
+      })
+      .catch((reject) => {
+        console.log(reject);
+      });
   }
 }
