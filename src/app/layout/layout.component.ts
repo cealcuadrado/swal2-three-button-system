@@ -16,4 +16,30 @@ export class LayoutComponent implements OnInit {
   openDialogBox(): void {
     Swal.fire('Título', 'Este es el texto del cuadro de diálogo', 'warning');
   }
+
+  openDialogOneButton(): void {
+    Swal.fire({
+      title: "Un botón",
+      text: "Este es un cuadro de diálogo de un botón.",
+      icon: "warning",
+      scrollbarPadding: true,
+      showConfirmButton: true,
+      confirmButtonText: "OK",
+      confirmButtonColor: "#5360a9",
+    })
+      .then((resolve) => {
+        console.log(resolve);
+      })
+      .catch((reject) => {
+        console.log(reject);
+      });
+  }
+
+  openDialogTwoButtons(): void {
+
+  }
+
+  openDialogThreeButtons(): void {
+
+  }
 }
