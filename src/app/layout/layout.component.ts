@@ -44,7 +44,24 @@ export class LayoutComponent implements OnInit {
   }
 
   openDialogTwoButtons(): void {
-
+    Swal.fire({
+      title: "Dos botones",
+      text: "Este es un cuadro de diálogo de dos botones.",
+      icon: "warning",
+      scrollbarPadding: true,
+      showConfirmButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Confirmar",
+      confirmButtonColor: "#069539",
+      cancelButtonText: "Cancelar",
+      cancelButtonColor: "#cc253a",
+    })
+      .then((resolve) => {
+        console.log(resolve);
+      })
+      .catch((reject) => {
+        console.log(reject);
+      });
   }
 
   openDialogThreeButtons(): void {
